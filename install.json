@@ -1,0 +1,15 @@
+{
+  "run": [
+    {
+      "method": "shell.run",
+      "params": {
+        "chain": true,
+        "message": [
+          "git clone https://github.com/koda-dernet/Side-Step.git",
+          "cd Side-Step",
+          ".\\install_windows.ps1"
+        ]
+      }
+    }
+  ]
+}
