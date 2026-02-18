@@ -1,0 +1,12 @@
+{
+  "run": [
+    {
+      "method": "hf.download",
+      "params": {
+        "path": "app/ACE-Step-1.5",
+        "_": ["ACE-Step/acestep-v15-turbo-continuous"],
+        "local-dir": "checkpoints/acestep-v15-turbo-continuous"
+      }
+    }
+  ]
+}
