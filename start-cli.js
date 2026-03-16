@@ -6,10 +6,10 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        path: "app/Side-Step",
+        path: "app",
         input: true,
         message: [
-          "uv run train.py"
+          "uv run sidestep"
         ]
       }
     }

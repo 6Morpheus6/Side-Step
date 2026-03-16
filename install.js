@@ -12,15 +12,28 @@ module.exports = {
     {
       method: "shell.run",
       params: {
+        message: "git clone https://github.com/ace-step/ACE-Step-1.5"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        path: "app/frontend/electron",
+        message: "npm install"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
         path: "app",
-        message: "powershell -ExecutionPolicy Bypass -File install_windows.ps1"
+        message: "uv sync"
       }
     },
     {
       method: "fs.link",
       params: {
         drive: {
-          checkpoints: "app/ACE-Step-1.5/checkpoints"
+          checkpoints: "ACE-Step-1.5/checkpoints"
         },
         peers: [
           "https://github.com/cocktailpeanut/ace-step-ui.pinokio.git",
@@ -31,7 +44,7 @@ module.exports = {
     {
       method: "hf.download",
       params: {
-        path: "app/ACE-Step-1.5",
+        path: "ACE-Step-1.5",
         "_": [ "ACE-Step/Ace-Step1.5" ],
         "local-dir": "checkpoints"
       }
@@ -39,7 +52,7 @@ module.exports = {
     {
       method: "hf.download",
       params: {
-        path: "app/ACE-Step-1.5",
+        path: "ACE-Step-1.5",
         "_": [ "ACE-Step/acestep-v15-base" ],
         "local-dir": "checkpoints/acestep-v15-base"
       }

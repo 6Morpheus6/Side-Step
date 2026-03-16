@@ -3,7 +3,7 @@
     {
       "method": "hf.download",
       "params": {
-        "path": "app/ACE-Step-1.5",
+        "path": "ACE-Step-1.5",
         "_": ["ACE-Step/acestep-5Hz-lm-4B"],
         "local-dir": "checkpoints/acestep-5Hz-lm-4B"
       }

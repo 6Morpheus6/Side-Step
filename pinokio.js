@@ -5,10 +5,11 @@ module.exports = {
   description: "Optimized Training script for Ace-Step with low VRAM support for local GPUs.",
   icon: "icon.png",
   menu: async (kernel, info) => {
-    let installed = info.exists("app/Side-Step/.venv")
+    let installed = info.exists("app/.venv")
     let running = {
       install: info.running("install.js"),
-      start: info.running("start.js"),
+      start_ui: info.running("start-ui.js"),
+      start_cli: info.running("start-cli.js"),
       update: info.running("update.js"),
       reset: info.running("reset.js")
     }
@@ -35,28 +36,19 @@ module.exports = {
         href: "install.js",
       }]
     } else if (installed) {
-      if (running.start) {
-        let local = info.local("start.js")
-        if (local && local.url) {
-          return [{
-            default: true,
-            icon: "fa-solid fa-rocket",
-            text: "Open Web UI",
-            href: local.url,
-          }, {
-            icon: 'fa-solid fa-terminal',
-            text: "Terminal",
-            href: "start.js",
-          }]
-        } else {
-          return [{
-            default: true,
-            icon: 'fa-solid fa-terminal',
-            text: "Terminal",
-            href: "start.js",
-          }]
-        }
-      } else if (running.update) {
+      if (running.start_ui) {
+        return [{
+          icon: 'fa-solid fa-terminal',
+          text: "Terminal",
+          href: "start-ui.js",
+        }]
+      } else if (running.start_cli) {
+        return [{
+          icon: 'fa-solid fa-terminal',
+          text: "Terminal",
+          href: "start-cli.js",
+        }]
+      }else if (running.update) {
         return [{
           default: true,
           icon: 'fa-solid fa-terminal',
@@ -72,11 +64,14 @@ module.exports = {
         }]
       } else {
         return [{
-          default: true,
           icon: "fa-solid fa-power-off",
-          text: "Start",
-          href: "start.js",
-        },  {
+          text: "Start Web UI",
+          href: "start-ui.js",
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "Start CLI Wizard",
+          href: "start-cli.js",
+        }, {
           icon: "fa-solid fa-download",
           text: "Download Models",
           menu: [
