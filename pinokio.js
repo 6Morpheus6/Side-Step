@@ -37,11 +37,26 @@ module.exports = {
       }]
     } else if (installed) {
       if (running.start_ui) {
-        return [{
-          icon: 'fa-solid fa-terminal',
-          text: "Terminal",
-          href: "start-ui.js",
-        }]
+        let local = info.local("start-ui.js")
+        if (local && local.url) {
+          return [{
+            default: true,
+            icon: "fa-solid fa-rocket",
+            text: "Open Web UI",
+            href: local.url,
+          }, {
+            icon: 'fa-solid fa-terminal',
+            text: "Terminal",
+            href: "start-ui.js",
+          }]
+        } else {
+          return [{
+            default: true,
+            icon: 'fa-solid fa-terminal',
+            text: "Terminal",
+            href: "start-ui.js",
+          }]
+        }
       } else if (running.start_cli) {
         return [{
           icon: 'fa-solid fa-terminal',
