@@ -30,6 +30,18 @@ module.exports = {
       }
     },
     {
+      method: "shell.run",
+      params: {
+        path: "app",
+        message: [
+          "mkdir trained_adapters",
+          "mkdir preprocessed_tensors",
+          "mkdir my_audio",
+          "mkdir exported_loras"
+        ]
+      }
+    },
+    {
       method: "fs.link",
       params: {
         drive: {
