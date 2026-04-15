@@ -60,6 +60,13 @@ module.exports = {
             href: "start-ui.js",
           }]
         }
+      } else if (is_downloading) {
+        return [{
+          default: true,
+          icon: 'fa-solid fa-terminal',
+          text: "Downloading",
+          href: is_downloading,
+        }]
       } else if (running.start_cli) {
         return [{
           icon: 'fa-solid fa-terminal',
