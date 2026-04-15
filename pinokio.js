@@ -18,7 +18,10 @@ module.exports = {
       "download_5Hz-lm-4B.json",
       "download_v15-turbo-shift1.json",
       "download_v15-turbo-shift3.json",
-      "download_v15-turbo-continuous.json"
+      "download_v15-turbo-continuous.json",
+      "download_v15-xl-turbo.json",
+      "download_v15-xl-base.json",
+      "download_v15-xl-sft.json",
     ]
     let is_downloading = null
     for(let item of downloading) {
@@ -95,6 +98,9 @@ module.exports = {
             { text: "acestep-v15-turbo-shift1", icon: "fa-solid fa-download", href: "download_v15-turbo-shift1.json", mode: "refresh" },
             { text: "acestep-v15-turbo-shift3", icon: "fa-solid fa-download", href: "download_v15-turbo-shift3.json", mode: "refresh" },
             { text: "acestep-v15-turbo-continuous", icon: "fa-solid fa-download", href: "download_v15-turbo-continuous.json", mode: "refresh" },
+            { text: "acestep-v15-xl-turbo", icon: "fa-solid fa-download", href: "download_v15-xl-turbo.json", mode: "refresh" },
+            { text: "acestep-v15-xl-base", icon: "fa-solid fa-download", href: "download_v15-xl-base.json", mode: "refresh" },
+            { text: "acestep-v15-xl-sft", icon: "fa-solid fa-download", href: "download_v15-xl-sft.json", mode: "refresh" },
           ]
         }, {
           icon: "fa-solid fa-plug",
