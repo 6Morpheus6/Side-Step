@@ -3,9 +3,9 @@
     {
       "method": "hf.download",
       "params": {
-        "path": "ACE-Step-1.5",
+        "path": "app/ACE-Step-1.5",
         "_": ["ACE-Step/acestep-v15-turbo-shift3"],
-        "local-dir": "app/checkpoints/acestep-v15-turbo-shift3"
+        "local-dir": "checkpoints/acestep-v15-turbo-shift3"
       }
     }
   ]
