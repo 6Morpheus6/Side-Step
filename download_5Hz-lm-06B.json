@@ -5,7 +5,7 @@
       "params": {
         "path": "ACE-Step-1.5",
         "_": [ "ACE-Step/acestep-5Hz-lm-0.6B" ],
-        "local-dir": "checkpoints/acestep-5Hz-lm-0.6B"
+        "local-dir": "app/checkpoints/acestep-5Hz-lm-0.6B"
       }
     }
   ]

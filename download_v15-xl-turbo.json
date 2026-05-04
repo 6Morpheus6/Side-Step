@@ -5,7 +5,7 @@
       "params": {
         "path": "ACE-Step-1.5",
         "_": ["ACE-Step/acestep-v15-xl-turbo"],
-        "local-dir": "checkpoints/acestep-v15-xl-turbo"
+        "local-dir": "app/checkpoints/acestep-v15-xl-turbo"
       }
     }
   ]
