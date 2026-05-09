@@ -12,6 +12,12 @@ module.exports = {
     {
       method: "shell.run",
       params: {
+        message: "git clone https://github.com/ace-step/ACE-Step-1.5"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
         path: "app",
         message: "git clone https://github.com/ace-step/ACE-Step-1.5"
       }
